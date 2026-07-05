@@ -19,12 +19,6 @@
 
 ![主界面](./docs/images/overview.png)
 
-### 打赏
-
-应用内支持微信 / 支付宝扫码打赏。
-
-![打赏界面](./docs/images/tip_me.png)
-
 ## 功能
 
 - 查看 / 编辑 **用户变量**、**系统变量**
@@ -49,7 +43,8 @@ go install github.com/wailsapp/wails/v2/cmd/wails@latest
 ## 开发运行
 
 ```powershell
-cd e:\dev\lzsdev\p-test
+git clone https://github.com/lzsbee/env-editor.git
+cd env-editor
 go mod tidy
 go build -ldflags "-H windowsgui -s -w" -o elevhelper.exe ./cmd/elevhelper
 wails dev
@@ -82,3 +77,9 @@ wails build
 
 - 用户变量：`HKCU\Environment`
 - 系统变量：`HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment`
+
+## 打赏
+
+应用内支持微信 / 支付宝扫码打赏。
+
+![打赏界面](./docs/images/tip_me.png)
