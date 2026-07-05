@@ -27,7 +27,6 @@
 - 系统变量保存时弹出 UAC 授权
 - 浅色 / 深色 / 跟随系统主题
 - 搜索过滤、复制变量值
-- 应用内 **打赏**（微信 / 支付宝）
 - 修改后广播 `WM_SETTINGCHANGE`，通知其他程序刷新环境
 
 ## 环境要求
@@ -78,8 +77,8 @@ wails build
 - 用户变量：`HKCU\Environment`
 - 系统变量：`HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment`
 
-## 打赏
+## 支持作者
 
-应用内支持微信 / 支付宝扫码打赏。
+如果这个工具对你有帮助，欢迎扫码支持。你的鼓励是我继续维护和改进的动力，非常感谢。
 
 ![打赏界面](./docs/images/tip_me.png)
