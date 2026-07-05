@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>环境变量编辑器</title>
+    <script>
+      ;(function () {
+        var key = 'env-editor-theme'
+        var pref = localStorage.getItem(key) || 'system'
+        var dark =
+          pref === 'dark' ||
+          (pref === 'system' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light'
+        document.documentElement.dataset.themePreference = pref
+        document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

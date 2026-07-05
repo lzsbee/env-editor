@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "jsx": "preserve",
+    "allowJs": true,
+    "checkJs": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*", "wailsjs/**/*"],
+  "vueCompilerOptions": {
+    "target": 3
+  }
+}
