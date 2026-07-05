@@ -2,12 +2,13 @@
 
 基于 **Wails v2 + Vue 3** 的 Windows 桌面应用，用于查看和编辑本机环境变量。
 
-仓库：[github.com/lzsbee/env-editor](https://github.com/lzsbee/env-editor)
+**GitHub**：https://github.com/lzsbee/env-editor
 
 ## 下载
 
+- **项目主页**：https://github.com/lzsbee/env-editor
 - **源码**：`git clone https://github.com/lzsbee/env-editor.git`
-- **exe**：在 [Releases](https://github.com/lzsbee/env-editor/releases) 下载（发布后可直装运行）
+- **exe 下载**：https://github.com/lzsbee/env-editor/releases
 
 > 编辑系统变量时，请右键 exe → **以管理员身份运行**。
 
