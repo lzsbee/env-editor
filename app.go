@@ -6,11 +6,13 @@ import (
 	"env-editor/internal/env"
 	"env-editor/internal/model"
 	"env-editor/internal/process"
+	"env-editor/internal/update"
 )
 
 // Keep type aliases in main so Wails bindings stay under main.*.
 type EnvVar = model.EnvVar
 type ProcessInfo = model.ProcessInfo
+type UpdateInfo = model.UpdateInfo
 
 // App exposes environment variable operations to the frontend.
 type App struct{}
@@ -21,6 +23,14 @@ func NewApp() *App {
 
 func (a *App) startup(ctx context.Context) {
 	_ = ctx
+}
+
+func (a *App) GetVersion() string {
+	return Version
+}
+
+func (a *App) CheckForUpdate() (UpdateInfo, error) {
+	return update.Check(Version)
 }
 
 func (a *App) ListUserVars() ([]EnvVar, error) {

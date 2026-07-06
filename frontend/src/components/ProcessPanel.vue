@@ -290,16 +290,22 @@ async function confirmKill() {
 
 table {
   width: 100%;
+  height: max-content;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
+tbody tr {
+  height: auto;
+}
+
 th,
 td {
-  padding: 10px 16px;
+  padding: 5px 12px;
   text-align: left;
   border-bottom: 1px solid var(--border-light);
-  vertical-align: top;
+  vertical-align: middle;
+  line-height: 1.35;
   overflow: hidden;
 }
 
@@ -366,17 +372,15 @@ th {
 
 .actions {
   white-space: nowrap;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: flex-start;
 }
 
 .link {
   border: none;
   background: none;
   color: var(--accent);
-  padding: 0;
+  padding: 0 6px 0 0;
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 .link.danger {
@@ -472,12 +476,13 @@ header h2 {
 }
 
 .icon-btn {
-  padding: 2px 8px;
+  padding: 1px 6px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--bg-surface);
   color: var(--text-muted);
   font-size: 12px;
+  line-height: 1.35;
 }
 
 .icon-btn:hover {

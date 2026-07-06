@@ -7,7 +7,14 @@
   "frontend:dev:watcher": "npm run dev",
   "frontend:dev:serverUrl": "auto",
   "author": {
-    "name": "",
+    "name": "lzsbee",
     "email": ""
+  },
+  "info": {
+    "companyName": "lzsbee",
+    "productName": "环境变量编辑器",
+    "productVersion": "1.1.0",
+    "copyright": "Copyright © lzsbee",
+    "comments": "Windows environment variable editor"
   }
 }

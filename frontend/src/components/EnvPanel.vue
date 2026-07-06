@@ -203,10 +203,12 @@ async function confirmDelete() {
           <tr v-for="item in vars" :key="item.name">
             <td class="name">{{ item.name }}</td>
             <td class="value">
-              <span class="value-text" :title="item.value">{{ item.value }}</span>
-              <button class="icon-btn" title="复制" @click="copyValue(item.value)">
-                复制
-              </button>
+              <div class="value-cell">
+                <span class="value-text" :title="item.value">{{ item.value }}</span>
+                <button class="icon-btn" title="复制" @click="copyValue(item.value)">
+                  复制
+                </button>
+              </div>
             </td>
             <td v-if="editable" class="actions">
               <button class="link" @click="openEdit(item)">编辑</button>
@@ -352,15 +354,22 @@ async function confirmDelete() {
 
 table {
   width: 100%;
+  height: max-content;
   border-collapse: collapse;
+  table-layout: fixed;
+}
+
+tbody tr {
+  height: auto;
 }
 
 th,
 td {
-  padding: 10px 16px;
+  padding: 5px 12px;
   text-align: left;
   border-bottom: 1px solid var(--border-light);
-  vertical-align: top;
+  vertical-align: middle;
+  line-height: 1.35;
 }
 
 th {
@@ -389,10 +398,11 @@ th {
   word-break: break-all;
 }
 
-.value {
+.value-cell {
   display: flex;
   gap: 8px;
-  align-items: flex-start;
+  align-items: center;
+  min-width: 0;
 }
 
 .value-text {
@@ -406,12 +416,13 @@ th {
 
 .icon-btn {
   flex-shrink: 0;
-  padding: 2px 8px;
+  padding: 1px 6px;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--bg-surface);
   color: var(--text-muted);
   font-size: 12px;
+  line-height: 1.35;
 }
 
 .icon-btn:hover {
