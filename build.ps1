@@ -22,6 +22,12 @@ Write-Host "-> wails ($outputName.exe)"
 
 $binPath = Join-Path "build" "bin" "$outputName.exe"
 if (-not (Test-Path $binPath)) {
+    $binPathNoExt = Join-Path "build" "bin" $outputName
+    if (Test-Path $binPathNoExt) {
+        Rename-Item $binPathNoExt $binPath
+    }
+}
+if (-not (Test-Path $binPath)) {
     throw "Build failed: $binPath not found"
 }
 
